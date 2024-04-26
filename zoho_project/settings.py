@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from socket import gethostbyname
+
+from socket import gethostname
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +28,9 @@ SECRET_KEY = 'django-insecure-knnfmj128h3$f+63!p-tf_hzxtc#9my(5a_i1r62$h(fv&of4-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['projectzoho-8v8rqnpdl-naveen-kumar-ms-projects-fb2de8d6.vercel.app','localhost','127.0.0.1']
+ALLOWED_HOSTS = os.environ.get( "ALLOWED_HOST").split( "," ) #or however you set it.
+
+ALLOWED_HOSTS.append(gethostbyname(gethostname()))
 
 
 # Application definition
@@ -37,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'leave_app',
+    'leave_app',
 ]
 
 MIDDLEWARE = [
