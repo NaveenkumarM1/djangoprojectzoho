@@ -31,8 +31,8 @@ DEBUG = True
 # ALLOWED_HOSTS = os.environ.get( "ALLOWED_HOST").split( "," ) #or however you set it.
 
 # ALLOWED_HOSTS.append(gethostbyname(gethostname()))
-#ALLOWED_HOSTS = ['.vercel.app']
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
+ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
 
 # Application definition
 
