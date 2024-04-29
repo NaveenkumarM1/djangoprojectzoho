@@ -31,9 +31,10 @@ DEBUG = True
 # ALLOWED_HOSTS = os.environ.get( "ALLOWED_HOST").split( "," ) #or however you set it.
 
 # ALLOWED_HOSTS.append(gethostbyname(gethostname()))
-ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = ['.vercel.app']
 #ALLOWED_HOSTS = ["192.168.29.196", "localhost", "127.0.0.1"]
 
+ALLOWED_HOSTS=['projectzoho.vercel.app']
 # Application definition
 
 INSTALLED_APPS = [
